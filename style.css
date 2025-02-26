@@ -118,3 +118,38 @@ body {
   #heading-image {
       width: 30%;
   }
+
+/* Style the file input container */
+.file-input-container {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    width: 133px;
+}
+
+/* Hide the default file input */
+#image-upload {
+    display: none; /* Hide the file input */
+}
+
+/* Style for the uploaded file name */
+.uploaded-file-name {
+    margin-left: 10px;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+/* Hover effect */
+.file-input-container:hover {
+    background-color: #0056b3;
+}
+
+/* Active/focus effect */
+.file-input-container:active, .file-input-container:focus {
+    background-color: #004080;
+}

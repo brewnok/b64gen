@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>b64-gen</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 
 <body>
@@ -16,9 +17,18 @@
         <!-- Section 1: Upload Image and Convert to Base64 -->
         <section id="image-section">
             <h2>Convert Image to Base64</h2>
-            <input type="file" id="image-upload" accept="image/*"><br><br>
+            <div class="file-input-container">
+                <label for="image-upload"><i class="fas fa-upload"></i>  Upload Image</label>
+            </div>
+            
+            <!-- Uploaded file name display -->
+            <span class="uploaded-file-name" id="uploaded-file-name"></span>
+            
+            <!-- Hidden file input -->
+            <input type="file" id="image-upload" accept="image/*">
+            <br><br>
             <button onclick="convertImageToBase64()">Convert to Base64</button><br><br>
-            <textarea id="image-base64" rows="10" cols="50" placeholder="Base64 will appear here..." readonly style="height: 37.9%;"></textarea><br><br>
+            <textarea id="image-base64" rows="10" cols="50" placeholder="Base64 will appear here..." readonly style="height: 38.5%;"></textarea><br><br>
             <p><strong>For HTML : </strong><span style="font-family: monospace; font-size: 1.2em;">&lt;img src="data:image;base64,<strong>PASTE_BASE64_CODE</strong>"&gt;</span></p>
             <button id="copy-image-base64" onclick="copyToClipboard('image-base64')">Copy</button>
             <button id="clearBtn" onclick="clearTextBoxImg()">Clear</button><br><br>
