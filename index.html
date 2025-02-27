@@ -14,17 +14,14 @@
     <p id="heading"><img id="heading-image" src="b64gen-logo.png" alt=""></p>
     <br>
     <div class="container">
-        <!-- Section 1: Upload Image and Convert to Base64 -->
         <section id="image-section">
             <h2>Convert Image to Base64</h2>
             <div class="file-input-container">
                 <label for="image-upload"><i class="fas fa-upload"></i>  Upload Image</label>
             </div>
             
-            <!-- Uploaded file name display -->
             <span class="uploaded-file-name" id="uploaded-file-name"></span>
             
-            <!-- Hidden file input -->
             <input type="file" id="image-upload" accept="image/*">
             <br><br>
             <button onclick="convertImageToBase64()">Convert to Base64</button><br><br>
@@ -34,7 +31,6 @@
             <button id="clearBtn" onclick="clearTextBoxImg()">Clear</button><br><br>
         </section>
 
-        <!-- Section 2: Convert Text to Base64 -->
         <section id="text-section">
             <h2>Convert Text to Base64</h2>
             <textarea id="text-input" rows="5" cols="50" placeholder="Enter text to convert"></textarea><br><br>

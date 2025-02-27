@@ -5,7 +5,7 @@ function convertImageToBase64() {
     if (file) {
         const reader = new FileReader();
         reader.onloadend = function () {
-            const base64String = reader.result.split(',')[1];  // remove the "data:image/jpeg;base64," part
+            const base64String = reader.result.split(',')[1];
             document.getElementById('image-base64').value = base64String;
         };
         reader.readAsDataURL(file);
@@ -14,7 +14,6 @@ function convertImageToBase64() {
     }
 }
 
-// Function to convert text to Base64
 function convertTextToBase64() {
     const text = document.getElementById('text-input').value;
     if (text) {
@@ -25,7 +24,6 @@ function convertTextToBase64() {
     }
 }
 
-// Function to copy content to clipboard
 function copyToClipboard(id) {
     const textarea = document.getElementById(id);
     textarea.select();
@@ -53,12 +51,11 @@ const fileInput = document.getElementById('image-upload');
 const uploadedFileName = document.getElementById('uploaded-file-name');
 
 fileInput.addEventListener('change', function (event) {
-    const file = event.target.files[0]; // Get the uploaded file
+    const file = event.target.files[0];
 
     if (file) {
-        // Display the file name separately
         uploadedFileName.innerHTML = `Filename: <strong>${file.name}</strong>`;
     } else {
-        uploadedFileName.textContent = ''; // Clear if no file is selected
+        uploadedFileName.textContent = '';
     }
 });
