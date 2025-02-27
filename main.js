@@ -45,9 +45,10 @@ function clearTextBoxImg() {
     const base64Text = document.getElementById('image-base64');
     base64Text.value = '';
 
-    const inputFile = document.getElementById('image-upload');
-    inputFile.value = '';
+    const inputFile = document.getElementById('uploaded-file-name');
+    inputFile.innerHTML = '';
 }
+
 const fileInput = document.getElementById('image-upload');
 const uploadedFileName = document.getElementById('uploaded-file-name');
 
